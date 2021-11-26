@@ -28,11 +28,11 @@ public class DriveRobot extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    double joystickMovementSpeed = Robot.oi.joystick.getY()*.5;
-    double joystickTurnSpeed = Robot.oi.joystick.getZ()*.5;
+    double joystickMovementSpeed = Robot.oi.joystick.getY()*.8;
+    double joystickTurnSpeed = Robot.oi.joystick.getZ()*.8;
     double deadzone = 0.2;
     double turnDeadzone = 0.25;
-    if (Math.abs(Robot.oi.joystick.getX()) < deadzone) {
+    if (Math.abs(Robot.oi.joystick.getY()) < deadzone) {
       joystickMovementSpeed = 0;
     }
     if (Math.abs(Robot.oi.joystick.getZ()) < turnDeadzone) {
